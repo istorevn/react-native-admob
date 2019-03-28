@@ -38,6 +38,7 @@ public class RNAdMobRewardedVideoAdModule extends ReactContextBaseJavaModule imp
     RewardedVideoAd mRewardedVideoAd;
     String adUnitID;
     String[] testDevices;
+    String adCustomData;
 
     private Promise mRequestAdPromise;
 
@@ -136,6 +137,11 @@ public class RNAdMobRewardedVideoAdModule extends ReactContextBaseJavaModule imp
       this.testDevices = list.toArray(new String[list.size()]);
     }
 
+    @ReactMethod
+    public void setAdCustomData(String adCustomData) {
+        this.adCustomData = adCustomData;
+    }
+    
     @ReactMethod
     public void requestAd(final Promise promise) {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
