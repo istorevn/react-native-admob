@@ -141,7 +141,7 @@ public class RNAdMobRewardedVideoAdModule extends ReactContextBaseJavaModule imp
     public void setAdCustomData(String adCustomData) {
         this.adCustomData = adCustomData;
     }
-    
+
     @ReactMethod
     public void requestAd(final Promise promise) {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
