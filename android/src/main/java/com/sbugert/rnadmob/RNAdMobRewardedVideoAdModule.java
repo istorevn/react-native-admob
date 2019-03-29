@@ -169,6 +169,7 @@ public class RNAdMobRewardedVideoAdModule extends ReactContextBaseJavaModule imp
                     }
 
                     AdRequest adRequest = adRequestBuilder.build();
+                    mRewardedVideoAd.setCustomData(adCustomData)
                     mRewardedVideoAd.loadAd(adUnitID, adRequest);
                 }
             }
